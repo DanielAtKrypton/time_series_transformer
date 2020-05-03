@@ -1,14 +1,15 @@
 """
 Encoder
 """
-from test.multiHeadAttention import (MultiHeadAttention,
-                                     MultiHeadAttentionChunk,
-                                     MultiHeadAttentionWindow)
-from test.positionwiseFeedForward import PositionwiseFeedForward
-
 # import numpy as np
 import torch
 import torch.nn as nn
+
+from tst.multiHeadAttention import (MultiHeadAttention,
+                                    MultiHeadAttentionChunk,
+                                    MultiHeadAttentionWindow)
+from tst.positionwiseFeedForward import PositionwiseFeedForward
+
 # import torch.nn.functional as F
 
 

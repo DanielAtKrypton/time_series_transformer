@@ -1,14 +1,14 @@
 """
 Decoder
 """
-from test.multiHeadAttention import (MultiHeadAttention,
-                                     MultiHeadAttentionChunk,
-                                     MultiHeadAttentionWindow)
-from test.positionwiseFeedForward import PositionwiseFeedForward
-
 # import numpy as np
 import torch
 import torch.nn as nn
+
+from tst.multiHeadAttention import (MultiHeadAttention,
+                                    MultiHeadAttentionChunk,
+                                    MultiHeadAttentionWindow)
+from tst.positionwiseFeedForward import PositionwiseFeedForward
 
 # import torch.nn.functional as F
 
@@ -40,6 +40,7 @@ class Decoder(nn.Module):
         One of ``'chunk'``, ``'window'`` or ``None``. Default is ``'chunk'``.
     """
 
+    # NOTE Too many arguments (8/5)pylint(too-many-arguments)
     def __init__(self,
                  d_model: int,
                  q: int,
@@ -76,6 +77,7 @@ class Decoder(nn.Module):
 
         self._dopout = nn.Dropout(p=dropout)
 
+    # NOTE Parameters differ from overridden 'forward' methodpylint(arguments-differ)
     def forward(self, x: torch.Tensor, memory: torch.Tensor) -> torch.Tensor:
         """Propagate the input through the Decoder block.
 

@@ -2,12 +2,13 @@
 MultiHeadAttention
 """
 from typing import Optional
-from test.utils import generate_local_map_mask
 
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+
+from tst.utils import generate_local_map_mask
 
 
 class MultiHeadAttention(nn.Module):

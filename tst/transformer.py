@@ -1,12 +1,12 @@
 """
 Transformer
 """
-from test.encoder import Encoder
-from test.decoder import Decoder
-from test.utils import generate_original_PE, generate_regular_PE
-
 import torch
 import torch.nn as nn
+
+from tst.decoder import Decoder
+from tst.encoder import Encoder
+from tst.utils import generate_original_PE, generate_regular_PE
 
 
 class Transformer(nn.Module):

@@ -5,8 +5,6 @@ import itertools
 # import datetime
 # import json
 from collections import OrderedDict
-from test import Transformer
-from test.loss import OZELoss
 
 import numpy as np
 import torch
@@ -17,6 +15,8 @@ from tqdm import tqdm
 
 from src.dataset import OzeDataset
 from src.utils import Logger, fit  # , compute_loss
+from tst import Transformer
+from tst.loss import OZELoss
 
 # ===== user set params ====
 search_params = OrderedDict({
