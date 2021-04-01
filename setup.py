@@ -23,8 +23,7 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        "torch",
-        "numpy==1.19.3", # not actually a dependency anylonger, just here because latest numpy, a torch dependency, at the time of writting is broken in Windows.
+        "torch==1.8.0+cu111",
     ],
     extras_require={
         'dev': [

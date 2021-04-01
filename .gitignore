@@ -1,5 +1,5 @@
 # Env and package
-.env
+.venv
 .vscode
 *.whl
 build
