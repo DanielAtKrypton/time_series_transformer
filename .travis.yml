@@ -10,7 +10,7 @@ before_install:
   - pip install -U pip
   - pip install codecov
 install:
-    - pip install -e [test] # install package + test dependencies
+    - pip install -e .[test] # install package + test dependencies
 script:
     - pytest --cov=time_series_transformer # run tests
 after_success:
